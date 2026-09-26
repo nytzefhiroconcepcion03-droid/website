@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Solutions</title>
+    <style>
+        /* Add color in the background */
+        body {
+            background-color: #E9EDF5;
+            margin: 0;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        /* Add color in to the Table */
+    table {
+        border-collapse: collapse;
+        background-color: #F4F6FA;
+        
+    }
+
+    /* Add style in the header */
+    h2 {
+        padding: 10px;
+        width: 50%;
+        border: 1px;
+        background-color: #2E3A59;
+        color: #FFFFFF;
+    }
+
+    /* Add padding in the thead, */
+    th,td,tr{
+        border: none;
+        padding: 10px 20px 15px 5px;
+
+    }
+
+    /* This will add a color to your SUBMIT AND RESET Button*/
+    input[type="submit"], input[type="reset"]{
+        background-color: #2e3a59;
+        color: #FFFFFF;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-weight: bold;
+        width: auto;
+    }
+
+    </style>
+</head>
+<body>
+    <center>
+        <!--the form contains the entire login table--> 
+        <form>
+            <!--the table is for th login interface-->
+            <table border="2">
+                <!--this will display the heading in the login-->
+                <thead align="center">
+                <th colspan="2"><h2>Portal Login</h2></th>    
+                </thead>
+                <!--the tbody contains the inout username and password rows-->
+                <tbody>
+                    <tr>
+                        <td align="right"><label type="text">Username:</label></td>
+                        <td><input type="text"  placeholder="Enter Username"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label type="password">Password:</label></td>
+                        <td><input type="text"  placeholder="Enter Password"></td>
+                    </tr>
+                </tbody>
+                <!--the tfoot contains the input submit and reset rows and the information of the student-->
+                <tfoot>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <p>Created by: Nyt Zefhiro C. Concepcion - Grade 12 Cooper</p>
+                            
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </center>
+    
+</body>
+</html>
