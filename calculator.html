@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculation</title>
-    <script src="calculation.js"></script>
+    <title>Sum Calculator</title>
+    <script src="calculation.js" defer></script>
     <style>
-        th,td,tr{
-            padding: 10px 20px 15px 5px;
+        table {
+            border: 3px solid #4f5b73;
+            border-collapse: collapse;
         }
-        input[type="button"]{
-            padding: 10px 16px;
-            background-color: rgb(137, 137, 137);
-            color: rgb(0, 0, 0);
-            border: none;
-            cursor: pointer;
+        td {
+            border: 1px solid #8c95a6;
+            padding: 14px 18px;
         }
-        input[type="reset"]{
-            padding: 10px 25px;
-            background-color: rgb(137, 137, 137);
-            color: rgb(0, 0, 0);
+        input[type="text"] {
+            width: 220px;
+            padding: 8px 10px;
+            border: 1px solid #8c95a6;
+            border-radius: 3px;
+        }
+        input[type="button"],
+        input[type="reset"] {
+            padding: 12px 24px;
+            background-color: #8a95a3;
+            color: #222;
             border: none;
             cursor: pointer;
         }
@@ -29,41 +34,30 @@
     <center>
         <h1>Calculator</h1>
         <form>
-            <table border="3">
+            <table>
                 <tr>
-                    <td>
-                        Enter First Number:
-                    </td>
-                    <td>
-                        <input type="text" id="txtfnum" name="basic_text" placeholder="Enter Your Number">
-                    </td>
+                    <td>Enter First Number:</td>
+                    <td><input type="text" id="txtFirst" placeholder="Enter Your Number"></td>
                 </tr>
                 <tr>
-                    <td>
-                        Enter Second Number:
-                    </td>
-                    <td>
-                        <input type="text" id="txtSnum" name="basic_text" placeholder="Enter Your Number">
+                    <td>Enter Second Number:</td>
+                    <td><input type="text" id="txtSecond" placeholder="Enter Your Number"></td>
+                </tr>
+                <tr>
+                    <td>Result:</td>
+                    <td><input type="text" id="txtResults" placeholder="Result" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="button" id="btnCompute" value="Compute">
+                        <input type="reset" id="btnReset" value="Reset">
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Result:
-                    </td>
-                    <td>
-                        <input type="text" id="txtresult" name="basic_text" placeholder="Result">
-                    </td>
+                    <td colspan="2" align="center"><a href="index.html">BACK TO THE LANDING PAGE</a></td>
                 </tr>
-                <tr style="border: none;">
-                    <td style="text-align: right; padding: 10px 5px 15px 5px;border: none;">
-                        <input type="button" value="Compute" onclick="computeResult()"></td>
-                    <td style="text-align: left;border: none;"><input type="reset" value="Reset"></td>
-                </tr>
-                
             </table>
         </form>
-
-
     </center>
 </body>
 </html>
