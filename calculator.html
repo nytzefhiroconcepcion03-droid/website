@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculation</title>
+    <script src="calculation.js"></script>
+    <style>
+        th,td,tr{
+            padding: 10px 20px 15px 5px;
+        }
+        input[type="button"]{
+            padding: 10px 16px;
+            background-color: rgb(137, 137, 137);
+            color: rgb(0, 0, 0);
+            border: none;
+            cursor: pointer;
+        }
+        input[type="reset"]{
+            padding: 10px 25px;
+            background-color: rgb(137, 137, 137);
+            color: rgb(0, 0, 0);
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Calculator</h1>
+        <form>
+            <table border="3">
+                <tr>
+                    <td>
+                        Enter First Number:
+                    </td>
+                    <td>
+                        <input type="text" id="txtfnum" name="basic_text" placeholder="Enter Your Number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Enter Second Number:
+                    </td>
+                    <td>
+                        <input type="text" id="txtSnum" name="basic_text" placeholder="Enter Your Number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Result:
+                    </td>
+                    <td>
+                        <input type="text" id="txtresult" name="basic_text" placeholder="Result">
+                    </td>
+                </tr>
+                <tr style="border: none;">
+                    <td style="text-align: right; padding: 10px 5px 15px 5px;border: none;"><input type="button" value="Compute" onclick="computeResult()"></td>
+                    <td style="text-align: left;border: none;"><input type="reset" value="Reset"></td>
+                </tr>
+                
+            </table>
+        </form>
+
+
+    </center>
+</body>
+</html>
