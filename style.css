@@ -1,10 +1,11 @@
-
+/*eto ang nag lalagay ng kulay sa buong navigation bar*/
 .navbar { 
     background-color: #2e6c42; /* Primary Navy */ 
     width: 100%; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 } 
 
+/*eto ang nag aayos ng alignment at spacing sa loob ng navigation bar*/
 .nav-list { 
     display: flex;                /* Aligns items side-by-side horizontally */ 
     flex-direction: row;          /* Sets main axis left-to-right */ 
@@ -15,6 +16,7 @@
     padding: 0;                   /* Clears browser default padding */ 
 }
 
+/*eto ang nag aayos ng style ng mga link*/
 .nav-link { 
     display: block;               /* Expands clickable box to fill padding */ 
     padding: 14px 20px;           /* Breathing room inside target box */ 
@@ -26,37 +28,37 @@
     transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-/* 1. Unvisited default link state */
+/*eto ang default o normal na itsura ng link*/
 .nav-link:link { 
     color: #FFFFFF; 
 } 
 
-/* 2. Visited link state */ 
+/*eto ang itsura ng ink pag nabuksan na */ 
 .nav-link:visited { 
     color: #E0E0E0; 
 } 
 
-/* 3. Mouse hover state */ 
+/*binabago neto ang kulay pag tinapat ang mouse sa link */ 
 .nav-link:hover { 
     background-color: #005A9C; 
     color: #FFFFFF; 
 } 
 
-/* 4. Keyboard focus state (Accessibility / WCAG compliance) */ 
+/*eto ang nag lalagay ng outline sa link */ 
 .nav-link:focus { 
     outline: 3px solid #FFFFFF; 
     outline-offset: -3px; 
     background-color: #004080; 
 } 
 
-/* 5. Active click-press state */ 
+/*eto ang nag lalagay ng pag pindot na effect pag pinindot ang link */ 
 .nav-link:active { 
     background-color: #002B55; 
     transform: translateY(1px); 
 } 
 
-/* 6. Current page highlight class */ 
+/*eto ang ang lalagay ng highlight sa menu pag nasa mismong page */ 
 .nav-link.active { 
     background-color: #2E6C42; 
-    border-bottom: 4px solid #2E6C42; 
+    border-bottom: 4px solid #183B24; 
 }
