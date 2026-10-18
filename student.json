@@ -1,0 +1,72 @@
+[
+    {
+    "lrn": "407183150167",
+    "name": "BAUTO, KIANE CARLO S.",
+    "age": 17,
+    "section": "Cooper",
+    "image": "image/kiane.jpg"
+    },
+    {
+    "lrn": "10797140650",
+    "name": "BERGADO, JULIUS CEAZAR S.",
+    "age": 17,
+    "section": "Cooper",
+    "image": "image/julius.jpg"
+    },
+    {
+    "lrn": "107883140206",
+    "name": "CONCEPCION, NYT ZEFHIRO C.",
+    "age": 17,
+    "section": "Cooper",
+    "image": "image/nyt.jpg"
+    },
+    {
+    "lrn": "107985140204",
+    "name": "CRUZ, VAUGHN LESTAT G.",
+    "age": 17,
+    "section": "Cooper",
+    "image": "image/vaughn.jpg"
+    },
+    {
+    "lrn": "108026140036",
+    "name": "DELA CRUZ, ZIANTINO L.",
+    "age": 17,
+    "section": "Cooper",
+    "image": "image/tino.jpg"
+    },
+    {
+    "lrn": "107985140238",
+    "name": "MALIKSI, LANCE KHERWIN C.",
+    "age": 17,
+    "section": "Cooper",
+    "image": "image/lance.jpg"
+    },
+    {
+    "lrn": "136601141090",
+    "name": "PAGLINAWAN, PRINCE LUSCIAN L.",
+    "age": 17,
+    "section": "Cooper",
+    "image": "image/prince.jpg"
+    },
+    {
+    "lrn": "424213150508",
+    "name": "PERALTA, DALE DANIELLE A.",
+    "age": 17,
+    "section": "Cooper",
+    "image": "image/dale.jpg"
+    },
+    {
+    "lrn": "121634130005",
+    "name": "ROSALES, JETHRO A.",
+    "age": 18,
+    "section": "Cooper",
+    "image": "image/jethro.jpg"
+    },
+    {
+    "lrn": "107990140098",
+    "name": "SALUGAO, RAILEY VALE A.",
+    "age": 17,
+    "section": "Cooper",
+    "image": "image/railey.png"
+    }
+]
