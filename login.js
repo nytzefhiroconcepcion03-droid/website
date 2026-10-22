@@ -8,7 +8,7 @@ function compareLogin(event){
     const errorMessage = document.getElementById("errorMessage");
     if(userName === USERNAME && passWord === PASSWORD){
         alert("whats up twin");
-        window.location.href = "message.html";
+        window.location.href = "chat.html";
     }else{
         alert("U aint twin");
         errorMessage.textContent = "Invalid Username or Password!";
