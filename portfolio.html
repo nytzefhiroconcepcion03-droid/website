@@ -6,6 +6,37 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+    <style>
+    body{
+    background-color: #EAF7EE;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    min-height: 100vh;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+.grid{
+    background-color: #b3ffcd;
+    color: #1c432a;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.row{
+    display: grid;
+    min-height: 400px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1em;
+}
+    </style>
+    
 <body>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <ul class="nav-list"> 
