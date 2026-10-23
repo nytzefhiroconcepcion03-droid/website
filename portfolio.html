@@ -7,34 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
     <style>
-    body{
-    background-color: #EAF7EE;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    min-height: 100vh;
-}
-
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-
-
-.grid{
-    background-color: #b3ffcd;
-    color: #1c432a;
-    font-size: 2rem;
-    padding: 0.5rem;
-}
-
-.row{
-    display: grid;
-    min-height: 400px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 1em;
-}
+            body{
+            background-color: #EAF7EE;
+            font-family: 'Times New Roman', Times, serif;
+            min-height: 50px;
+        }
+        #site{
+            width: 100%;
+            display: block;
+            margin: 10px auto;
+            color: #183B24;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            border: 2px solid #86D09D;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .grid{
+            color:black;
+            font-size: 1.5rem;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 1em;
+        }
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
     </style>
     
 <body>
@@ -57,6 +61,7 @@
     <a href = "Schedule.html" class = "grid"> COOPER SCHEDULE</a> <br>
     <a href = "/javascript/json/classmates.html" class = "grid"> CLASSMATES LISTS</a> <br>
     <a href = "Logic.html" class = "grid"> LOGICAL LOG IN</a> <br>
+    <a href = "ClassStyle.html" id="site" class = "grid"> CLASS SCHEDULE STYLED</a> <br>
     </main>
 </body>
 </html>
