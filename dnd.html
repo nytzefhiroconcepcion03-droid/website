@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match the Scientist to Their Discovery</title>
+    <link rel="stylesheet" href="dNd.css">
+    </head>
+    <body>
+        <a href="/javascript/index.html">LANDING PAGE</a>
+    <div class="game-container">
+        <h1>Match the Scientist to Their Discovery</h1>
+        <center>
+            <p>This game is for High School Students</p>
+        </center>
+
+        <div class="board">
+        <div class="dragable-container">
+            <h2>Scientists</h2>
+            <div class="box" draggable="true" id="einstein" data-scientist="einstein">Albert Einstein</div>
+            <div class="box" draggable="true" id="newton" data-scientist="newton">Isaac Newton</div>
+            <div class="box" draggable="true" id="curie" data-scientist="curie">Marie Curie</div>
+            <div class="box" draggable="true" id="darwin" data-scientist="darwin">Charles Darwin</div>
+            <div class="box" draggable="true" id="hawking" data-scientist="hawking">Stephen Hawking</div>
+            <div class="box" draggable="true" id="galileo" data-scientist="galileo">Galileo Galilei</div>
+            <div class="box" draggable="true" id="tesla" data-scientist="tesla">Nikola Tesla</div>
+            <div class="box" draggable="true" id="pasteur" data-scientist="pasteur">Louis Pasteur</div>
+            <div class="box" draggable="true" id="fleming" data-scientist="fleming">Alexander Fleming</div>
+            <div class="box" draggable="true" id="mandel" data-scientist="mandel">Gregor Mendel</div>
+        </div>
+
+        <div class="dropable-container">
+            <h2>Discoveries</h2>
+            <div class="dropable" data-discovery="einstein">Theory of Relativity</div>
+            <div class="dropable" data-discovery="newton">Laws of Motion</div>
+            <div class="dropable" data-discovery="curie">Radium and Polonium.</div>
+            <div class="dropable" data-discovery="darwin">Theory of Evolution</div>
+            <div class="dropable" data-discovery="hawking">Black Hole Radiation</div>
+            <div class="dropable" data-discovery="galileo">Moons of Jupiter</div>
+            <div class="dropable" data-discovery="tesla">Alternating Current (AC)</div>
+            <div class="dropable" data-discovery="pasteur">Pasteurization and Vaccines</div>
+            <div class="dropable" data-discovery="fleming">Penicillin</div>
+            <div class="dropable" data-discovery="mandel">Laws of Inheritance</div>
+        </div>
+        
+    </div>
+    <div class="scoreboard-container">
+        <div id="remarks">Match them</div>
+        <div id="scores">Score: 0 / 10</div>
+        <button id="reset-btn">Reset Game</button>
+    </div>
+
+    <script src="DragDrop.js"></script>
+</body>
+</html>
