@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-</head>
     <style>
-            body{
+        body{
             background-color: #EAF7EE;
             font-family: 'Times New Roman', Times, serif;
             min-height: 50px;
         }
         #site{
-            width: 200%;
+            width: 100%;
             display: block;
             margin: 10px auto;
             color: #183B24;
             text-decoration: none;
             font-weight: bold;
-            padding: 10px;
+            padding: 5px;
             border: 2px solid #86D09D;
             border-radius: 4px;
             text-align: center;
@@ -28,11 +27,15 @@
             color:black;
             font-size: .9rem;
         }
-        .row{
+        .row {
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
+            grid-template-columns: repeat(4, 180px);
             grid-template-rows: repeat(4, 1fr);
-            gap: 1em;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+            width: 100%;
+            flex: 1;
         }
         *{
             margin:0px;
@@ -40,30 +43,33 @@
             box-sizing: border-box;
         }
     </style>
-    
+</head>
 <body>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <ul class="nav-list"> 
-        <li class="nav-item"><a class="nav-link" href="">Home</a></li> 
+        <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li> 
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> 
         <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li> 
         <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li> 
         <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li> 
         </ul> 
     </nav> 
-    <main class = "row">
-    <a href = "demo2.html" id ="site" class = "grid"> FORM ELEMENT</a> <br>
-    <a href = "pt2.html" id="site" class = "grid"> PORTAL LOGIN</a> <br>
-     <a href = "sample.html" id="site" class = "grid"> CONSOLE EXAMPLE</a> <br>
-    <a href = "calculator.html" id="site" class = "grid"> CALCULATOR</a> <br>
-    <a href = "Discount.html" id="site" class = "grid"> DISCOUNT CALCULATOR</a> <br>
-    <a href = "NetFramework.html" id="site" class = "grid"> SAMPLE HOMEPAGE</a> <br>
-    <a href = "Schedule.html" id="site" class = "grid"> COOPER SCHEDULE</a> <br>
-    <a href = "/javascript/json/classmates.html" id="site" class = "grid"> CLASSMATES LISTS</a> <br>
-    <a href = "Logic.html" id="site" class = "grid"> LOGICAL LOG IN</a> <br>
-    <a href = "grid.html" id="site" class = "grid"> GRID LAYOUT</a> <br>
-    <a href = "ClassStyle.html" id="site" class = "grid"> CLASS SCHEDULE STYLED</a> <br>
-    <a href = "Pracdnd.html" id="site" class = "grid"> DRAG AND DROP TEST</a><br>
-    </main>
+        <main class = "row">
+            <a href = "demo2.html" id ="site" class = "grid"> FORM ELEMENT</a> 
+            <a href = "pt2.html" id="site" class = "grid"> PORTAL LOGIN</a>
+            <a href = "sample.html" id="site" class = "grid"> CONSOLE EXAMPLE</a>
+            <a href = "calculator.html" id="site" class = "grid"> CALCULATOR</a>
+            <a href = "Discount.html" id="site" class = "grid"> DISCOUNT CALCULATOR</a>
+            <a href = "NetFramework.html" id="site" class = "grid"> SAMPLE HOMEPAGE</a>
+            <a href = "Schedule.html" id="site" class = "grid"> COOPER SCHEDULE</a>
+            <a href = "/javascript/json/classmates.html" id="site" class = "grid"> CLASSMATES LISTS</a>
+            <a href = "Logic.html" id="site" class = "grid"> LOGICAL LOG IN</a>
+            <a href = "grid.html" id="site" class = "grid"> GRID LAYOUT</a>
+            <a href = "ClassStyle.html" id="site" class = "grid"> CLASS SCHEDULE STYLED</a>
+            <a href = "/javascript/dragNdrop/Pracdnd.html" id="site" class = "grid"> DRAG AND DROP TEST</a>
+            <a href="/javascript/dndGame/dnd.html" id="site" class="grid"> DRAG AND DROP GAME</a>
+        </main>
 </body>
+
+
 </html>
