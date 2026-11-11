@@ -50,6 +50,8 @@
 
         var grades = JSON.parse(localStorage.getItem('grades')) || [];
 
+        var selectedIndex = -1;
+
         function showGrades() {
             tableBody.textContent = "";
             for (var i = 0; i < grades.length; i++) {
