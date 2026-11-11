@@ -54,11 +54,36 @@
             tableBody.textContent = "";
             for (var i = 0; i < grades.length; i++) {
                 var row = tableBody.insertRow();
-                row.insertCell(0).textContent = grades[i].lrn;
-                row.insertCell(1).textContent = grades[i].name;
-                row.insertCell(2).textContent = grades[i].subject;
-                row.insertCell(3).textContent = grades[i].grade;
+                row.insertCell().textContent = grades[i].lrn;
+                row.insertCell().textContent = grades[i].name;
+                row.insertCell().textContent = grades[i].subject;
+                row.insertCell().textContent = grades[i].grade;
+
+                var actionCell = row.insertCell();
+
+                actionCell.appendChild(makeUpdateButton(i));
             }
+        }
+
+        function makeUpdateButton(index) {
+            var button = document.createElement('button');
+            button.textContent = "Update";
+            button.addEventListener('click', function () {
+                loadforUpdate(index);
+            });
+
+            return button;
+        }
+
+        function loadforUpdate(index) {
+            selectedIndex = index;
+            lrnInput.value = grades[index].lrn;
+            nameInput.value = grades[index].name;
+            subjectInput.value = grades[index].subject;
+            gradeInput.value = grades[index].grade;
+
+            btnSave.value = "Update";
+            message.textContent = "Change the values, then click the Update button above the table.";
         }
 
         function saveGrade() {
@@ -78,8 +103,18 @@
                 subject: subject,
                 grade: grade
             };
+            
+            if (selectedIndex === -1) {
+                grades.push(record);
+                message.textContent = "Grade Saved";
+            } else {
+                grades[selectedIndex] = record;
+                message.textContent = "Grade Updated";
+                selectedIndex = -1;
+                btnSave.value = "Save";
+            }
 
-            grades.push(record);
+            
             localStorage.setItem('grades', JSON.stringify(grades));
 
             message.textContent = "Grade Saved";
