@@ -52,7 +52,6 @@
         var grades = JSON.parse(localStorage.getItem('grades')) || [];
 
         var selectedIndex = -1;
-
         function showGrades() {
             tableBody.textContent = "";
             for (var i = 0; i < grades.length; i++) {
@@ -65,6 +64,7 @@
                 var actionCell = row.insertCell();
 
                 actionCell.appendChild(makeUpdateButton(i));
+                actionCell.appendChild(makeDeleteButton(i));
             }
         }
 
@@ -78,6 +78,16 @@
             return button;
         }
 
+        function makeDeleteButton (index) {
+            var deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+
+            deleteButton.addEventListener("click", function () {
+                deleteGrade(index);
+            });
+            return deleteButton;
+        }
+
         function loadforUpdate(index) {
             selectedIndex = index;
             lrnInput.value = grades[index].lrn;
@@ -87,6 +97,32 @@
 
             btnSave.value = "Update";
             message.textContent = "Change the values, then click the Update button above the table.";
+        }
+
+        function deleteGrade(index) {
+            var sure = confirm("Delete the record of " + grades[index].name + "?");
+
+            if (!sure) {
+                return;
+            }
+
+            grades.splice(index, 1);
+
+            if (selectedIndex === index) {
+                seletecIndex = -1;
+                btnSave.value = "Save";
+                lrnInput.value = "";
+                nameInput.value = "";
+                subjectInput.value = "";
+                gradeInput.value = "";
+
+            } else if (selectedIndex > index) {
+                selectedIndex = selectedIndex - 1;
+            }
+
+            localStorage.setItem("grade", JSON.stringify(grades));
+            message.textContent = "Deleted.";
+            showGrades();
         }
 
         function saveGrade() {
@@ -117,7 +153,7 @@
                 btnSave.value = "Save";
             }
 
-            
+
             localStorage.setItem('grades', JSON.stringify(grades));
 
             message.textContent = "Grade Saved";
