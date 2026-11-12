@@ -5,20 +5,232 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 { text-align: center; color: #1F3864; }
+            .carousel {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .slides {
+            position: relative;
+            aspect-ratio: 16 / 9; /* keeps the shape on any screen width */
+            overflow: hidden;
+            background: #000;
+            border-radius: 8px;
+        }
+            slide {
+            position: absolute; /* stack all slides in the same spot */
+            inset: 0;
+            margin: 0;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* fill the box without stretching */
+            display: block;
+        }
+
+
+
+            .slide figcaption {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            padding: 12px 16px;
+            background: rgba(0, 0, 0, 0.55);
+            color: #fff;
+            }
+            .nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            border: none;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 24px;
+            padding: 10px 14px;
+            cursor: pointer;
+            }
+            .nav:hover { background: rgba(0, 0, 0, 0.8); }
+            .prev { left: 8px; }
+            .next { right: 8px; }
+            .dots { text-align: center; padding: 12px 0; }
+            .dot {
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            padding: 0;
+            border: none;
+            border-radius: 50%;
+            background: #b8b8b8;
+            cursor: pointer;
+            }
+            .dot.active { background: #1F3864; }
+    </style>
 </head>
 <body>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
-        <ul class="nav-list"> 
-        <li class="nav-item"><a class="nav-link" href="Index.html">Home</a></li> 
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> 
-        <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li> 
-        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li> 
-        <li class="nav-item"><a class="nav-link active" href="Contact.html">Contact</a></li> 
-        </ul> 
+            <ul class="nav-list"> 
+            <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li> 
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> 
+            <li class="nav-item"><a class="nav-link active" href="Gallery.html">Gallery</a></li> 
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li> 
+            <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li> 
+            </ul> 
     </nav>
-        <center>
-            <h1>CONTACT</h1>
-        </center>
+    <center>
+        <h1>GALLERY</h1>
+    </center>
+
+    <div class="carousel" id="carousel">
+    <div class="slides">
+    <figure class="slide">
+    <img src="img/militech.jpg" alt="Describe image 1">
+    <figcaption>future me</figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/School.jpg" alt="Describe image 2">
+    <figcaption>school picture</figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/momside.jpg" alt="Describe image 3">
+    <figcaption>Family Mother Side</figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/dadside.jpg" alt="Describe image 4">
+    <figcaption>Family Father Side</figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/hobby1.png" alt="Describe image 5">
+    <figcaption>Hobby</figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/hobby2.png" alt="Describe image 6">
+    <figcaption>Hobby</figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/hobby3.png" alt="Describe image 7">
+    <figcaption>Hobby</figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/hobby4.png" alt="Describe image 8">
+    <figcaption>Hobby</figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/fr13.jpg" alt="Describe image 9">
+    <figcaption>Friends</figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/fr5.jpg" alt="Describe image 10">
+    <figcaption></figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/fr9.jpg" alt="Describe image 11">
+    <figcaption></figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/fr1.jpg" alt="Describe image 12">
+    <figcaption></figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/fr2.jpg" alt="Describe image 13">
+    <figcaption></figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/fr6.jpg" alt="Describe image 14">
+    <figcaption></figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/fr4.jpg" alt="Describe image 15">
+    <figcaption></figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/fr10.jpg" alt="Describe image 16">
+    <figcaption></figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/fr7.jpg" alt="Describe image 17">
+    <figcaption></figcaption>
+    </figure>
+    <figure class="slide">
+    <img src="img/fr19.jpg" alt="Describe image 18">
+    <figcaption></figcaption>
+    </figure>
+    <button class="nav prev" type="button" aria-label="Previous
+    slide">&#10094;</button>
+
+
+    <button class="nav next" type="button" aria-label="Next slide">&#10095;</button>
+    </div>
+    <div class="dots"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+    $(document).ready(function () {
+    // 1. Cache elements and settings
+    const $carousel = $("#carousel");
+    const $slides = $carousel.find(".slide");
+    const $dotsBox = $carousel.find(".dots");
+    const total = $slides.length;
+    const FADE_TIME = 500; // milliseconds
+    const DELAY = 4000; // time between automatic slides
+    let current = 0; // index of the visible slide
+    let timer = null; // holds the autoplay timer
+    // 2. Initial state: show only the first slide
+    $slides.hide().eq(0).show();
+    // 3. Create one dot per slide
+    $slides.each(function (i) {
+    $("<button>")
+    .attr({ type: "button", "aria-label": "Go to slide " + (i + 1) })
+    .addClass("dot" + (i === 0 ? " active" : ""))
+    .data("index", i)
+    .appendTo($dotsBox);
+    });
+    const $dots = $dotsBox.find(".dot");
+    // 4. Show a specific slide
+    function showSlide(index) {
+    if (index === current) return; // nothing to do
+    $slides.eq(current).stop(true, true).fadeOut(FADE_TIME);
+    $slides.eq(index).stop(true, true).fadeIn(FADE_TIME);
+    $dots.removeClass("active").eq(index).addClass("active");
+    current = index;
+    }
+    function nextSlide() { showSlide((current + 1) % total); }
+    function prevSlide() { showSlide((current - 1 + total) % total); }
+    // 5. Controls
+    $carousel.on("click", ".next", nextSlide);
+    $carousel.on("click", ".prev", prevSlide);
+    $dotsBox.on("click", ".dot", function () {
+    showSlide($(this).data("index"));
+    });
+    // 6. Autoplay (pauses on hover)
+    function startAutoplay() {
+    stopAutoplay(); // avoid duplicate timers
+    timer = setInterval(nextSlide, DELAY);
+    }
+    function stopAutoplay() {
+    clearInterval(timer);
+    }
+    $carousel.on("mouseenter", stopAutoplay)
+
+    .on("mouseleave", startAutoplay);
+    startAutoplay();
+    // 7. Keyboard control
+    $(document).on("keydown", function (event) {
+    if (event.key === "ArrowRight") {
+    nextSlide();
+    } else if (event.key === "ArrowLeft") {
+    prevSlide();
+    }
+    });
+    });
+    </script>
     <footer>
         <center>
             <p>&copy; Hiro Corp. | Facebook: Nyt Zefhiro C. Concepcion</p>
