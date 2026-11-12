@@ -11,7 +11,7 @@
 .nav-list { 
     display: flex;                /* Aligns items side-by-side horizontally */ 
     flex-direction: row;          /* Sets main axis left-to-right */ 
-    justify-content: flex-start;  /* Packs items toward start of menu */ 
+    justify-content: center;  /* Packs items toward start of menu */ 
     align-items: center;          /* Centers items vertically */ 
     list-style-type: none;        /* Removes default list bullet points */ 
     margin: 0;                    /* Clears browser default margins */ 
