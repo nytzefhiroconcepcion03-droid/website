@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Landscape Christmas Tree</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(to bottom, #fe6767, #f22828, #7d0000);
+        }
+
+        #myCanvas {
+            border: solid 2px #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        #musicBtn {
+            font-size: 15px;
+            color: #000000;
+            background-color: #ff2626;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="portfolio.html"> HOME</a>
+
+    <audio id="bgMusic" loop>
+        <source src="Mistletoe.mp3" type="audio/mpeg">
+    </audio>
+    <button id="musicBtn">Play Music</button>
+
+    <canvas id="myCanvas" width="600" height="400"></canvas>
+
+    <script>
+        const bgMusic = document.getElementById("bgMusic");
+        const musicBtn = document.getElementById("musicBtn");
+
+        musicBtn.addEventListener("click", function () {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                musicBtn.textContent = "Pause Music";
+            } else {
+                bgMusic.pause();
+                musicBtn.textContent = "Play Music";
+            }
+        });
+
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 340, 600, 60);
+
+
+        ctx.fillStyle = "#5c3a21";
+        ctx.fillRect(280, 290, 40, 50);
+
+        ctx.fillStyle = "#15803d";
+
+        ctx.beginPath();
+        ctx.moveTo(300, 165);
+        ctx.lineTo(190, 290);
+        ctx.lineTo(410, 290);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(300, 105);
+        ctx.lineTo(210, 215);
+        ctx.lineTo(390, 215);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(300, 55);
+        ctx.lineTo(235, 145);
+        ctx.lineTo(365, 145);
+        ctx.closePath();
+        ctx.fill();
+
+
+        ctx.beginPath();
+        ctx.arc(275, 120, 8, 0, Math.PI * 2);
+        ctx.fillStyle = "red";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(320, 130, 8, 0, Math.PI * 2);
+        ctx.fillStyle = "#D4AF37";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(255, 190, 8, 0, Math.PI * 2);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(300, 175, 8, 0, Math.PI * 2);
+        ctx.fillStyle = "red";
+        ctx.fill();
+
+
+        ctx.beginPath();
+        ctx.arc(345, 195, 8, 0, Math.PI * 2);
+        ctx.fillStyle = "silver";
+        ctx.fill();
+
+
+        ctx.beginPath();
+        ctx.arc(235, 265, 8, 0, Math.PI * 2);
+        ctx.fillStyle = "#D4AF37";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(285, 245, 8, 0, Math.PI * 2);
+        ctx.fillStyle = "red";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(325, 270, 8, 0, Math.PI * 2);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(365, 260, 8, 0, Math.PI * 2);
+        ctx.fillStyle = "#D4AF37";
+        ctx.fill();
+
+        ctx.fillStyle = "#D4AF37";
+        ctx.beginPath();
+        ctx.moveTo(300, 30);
+        ctx.lineTo(308, 46);
+        ctx.lineTo(325, 46);
+        ctx.lineTo(312, 57);
+        ctx.lineTo(316, 73);
+        ctx.lineTo(300, 63);
+        ctx.lineTo(284, 73);
+        ctx.lineTo(288, 57);
+        ctx.lineTo(275, 46);
+        ctx.lineTo(292, 46);
+        ctx.closePath();
+        ctx.fill();
+    </script>
+
+</body>
+
+</html>
