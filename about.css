@@ -8,7 +8,7 @@ body {
     flex-direction: column;
 }
 
-.about-container {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,12 +26,9 @@ body {
     text-align: center;
     gap: 14px;
     width: 100%;
-    box-sizing: border-box;
     background-color: #ffffff;
     border: 2px solid #b8dec2;
-    border-radius: 16px;
     padding: 24px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
 .profile-pic {
@@ -40,19 +37,6 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #7ec492;
-}
-
-.profile-info h2 {
-    margin: 0 0 6px 0;
-}
-
-.profile-info p {
-    margin: 4px 0;
-}
-
-.profile-bio {
-    max-width: 650px;
-    line-height: 1.5;
 }
 
 .about-tabs {
@@ -82,19 +66,7 @@ body {
     text-align: center;
 }
 
-.section-header h2,
-.section-header h3,
-.section-header h4 {
-    margin: 6px 0;
-}
-
-.about-tabs ul li,
-.about-tabs ol li {
-    margin-bottom: 8px;
-    line-height: 1.5;
-}
-
-.about-footer {
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,7 +74,7 @@ body {
     text-align: center;
 }
 
-.about-footer p {
+.footer p {
     margin: 0;
     font-size: 0.9rem;
 }
