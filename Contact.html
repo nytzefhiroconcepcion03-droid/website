@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact - Hiro Corp.</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -11,29 +12,91 @@
             font-family: 'Times New Roman', Times, serif;
             min-height: 50px;
         }
+
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .contact-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+            width: 100%;
+            background-color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 1px solid #cce3d4;
+        }
+
+        .contact-type {
+            margin: 0;
+            font-size: 12px;
+            font-weight: bold;
+            color: #5b8266;
+        }
+
+        .contact-value {
+            margin: 0;
+            font-size: 16px;
+            color: #222222;
+        }
     </style>
 </head>
+
 <body>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
-        <ul class="nav-list"> 
-        <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li> 
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> 
-        <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li> 
-        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li> 
-        <li class="nav-item"><a class="nav-link active" href="Contact.html">Contact</a></li> 
-        </ul> 
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="Contact.html">Contact</a></li>
+        </ul>
     </nav>
+
+    <center>
+        <h1>CONTACT</h1>
+        <h2>Feel free to reach out to me!</h2>
+    </center>
+
+    <div class="contact-list">
+        <div class="contact-card">
+            <p class="contact-type">EMAIL ADDRESS</p>
+            <p class="contact-value">nytzefhiroconcepcion03@gmail.com</p>
+        </div>
+
+        <div class="contact-card">
+            <p class="contact-type">FACEBOOK PROFILE</p>
+            <p class="contact-value">Nyt Zefhiro C. Concepcion</p>
+        </div>
+
+        <div class="contact-card">
+            <p class="contact-type">INSTAGRAM PROFILE</p>
+            <p class="contact-value">@nzefhiro</p>
+        </div>
+
+        <div class="contact-card">
+            <p class="contact-type">PHONE NUMBER</p>
+            <p class="contact-value">+63 999 999 9999</p>
+        </div>
+
+        <div class="contact-card">
+            <p class="contact-type">ADDRESS</p>
+            <p class="contact-value">123 Swiss, Switzerland</p>
+        </div>
+    </div>
+
+    <footer>
         <center>
-            <h1>CONTACT</h1>
-            <h2>Feel free to reach out to me!</h2>
-            <img src="gmail.png" alt="Gmail Profile"> <br>
-            <img src="ig.png" alt="Instagram Profile"> <br>
-            <img src="fb.png" alt="Facebook Profile">
-        </center>
-        <footer>
-        <center>
-            <p>&copy; Hiro Corp. | Facebook: Nyt Zefhiro C. Concepcion</p>
+            <p>© Hiro Corp. | Facebook: Nyt Zefhiro C. Concepcion</p>
         </center>
     </footer>
 </body>
+
 </html>
