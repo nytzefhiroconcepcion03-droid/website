@@ -1,86 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About - Hiro Corp.</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
-    
+
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
     <script>
-    $( function() {
-        $( "#tabs" ).tabs();
-    } );
+        $(function () {
+            $("#tabs").tabs();
+        });
     </script>
-    <style>
-        body {
-            background-color: #EAF7EE;
-            font-family: 'Times New Roman', Times, serif;
-            min-height: 50px;
-        }
-    </style>
-
 </head>
+
 <body>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
-        <ul class="nav-list"> 
-        <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li> 
-        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li> 
-        <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li> 
-        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li> 
-        <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li> 
-        </ul> 
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
     </nav>
-    <center>
-        <h1>ABOUT</h1>
-    </center>
 
-    <div id="tabs">
-    <ul>
-        <li><a href="#tabs-1">HOBBIES</a></li>
-        <li><a href="#tabs-2">FAVORITE ARTISTS</a></li>
-        <li><a href="#tabs-3">FAVORITE SONGS</a></li>
-        <li><a href="#tabs-4">FAVORITE MOVIES/SERIES</a></li>
-        <li><a href="#tabs-5"></a></li>
+    <main class="about-container">
 
-    </ul>
-    <div id="tabs-1">
-            <p> 1. Watching Movies & Series (Kdrama, Anime, & Reality/Variety Show)<br> 2. Playing Video games<br> 3. Eating<br> 4. Sleeping<br> 5. Listening to Music</p>
-        </div>
-        <div id="tabs-2">
-            <p> <h2>(!This is a list not a ranking!)</h2> Twice<br> Newjeans<br>  Leessang<br>  Gorillaz<br>  Green Day<br>  Queen<br>  Malcolm Todd<br>  Girl's Generation<br>  Yel<br> BigBang<br> December Avenue<br> Parokya Ni Edgar<br> Eminem<br> Kendrick Lamar<br>  The Killers<br> Linkin Park<br> <strong>+Many more<br></strong> <h3>Yes bro i listen to everything</h3></p>
-        </div>
-        <div id="tabs-3">
-            <p>
-                <center>
-                    <h2>MY FAVORITE SONGS OF ALL TIME!!!<h4>IN NO PARTICULAR ORDER</h4></h2>
+        <section class="profile-card">
+            <img src="profile.jpg" class="profile-pic">
+            <div class="profile-info">
+                <h2>Nyt Zefhiro C. Concepcion</h2>
+                <p>Grade 12 ICT Programming Student | Grade 12</p>
+                <p class="profile-bio">
+                    Yo! Welcome to my About page. Below you can check out my hobbies, favorite music artists, top songs,
+                    and favorite movies/K-dramas.
+                </p>
+            </div>
+        </section>
+
+        <section id="tabs" class="about-tabs">
+            <ul class="tab-nav">
+                <li><a href="#tabs-1">HOBBIES</a></li>
+                <li><a href="#tabs-2">FAVORITE ARTISTS</a></li>
+                <li><a href="#tabs-3">FAVORITE SONGS</a></li>
+                <li><a href="#tabs-4">FAVORITE MOVIES/SERIES</a></li>
+            </ul>
+
+            <div id="tabs-1">
+                <ol>
+                    <li>Watching Movies & Series (Kdrama, Anime, & Reality/Variety Show)</li>
+                    <li>Playing Video games</li>
+                    <li>Eating</li>
+                    <li>Sleeping</li>
+                    <li>Listening to Music</li>
+                </ol>
+            </div>
+
+            <div id="tabs-2">
+                <h2>(!This is a list not a ranking!)</h2>
+                <p>
+                    Twice<br>
+                    Newjeans<br>
+                    Leessang<br>
+                    Gorillaz<br>
+                    Green Day<br>
+                    Queen<br>
+                    Malcolm Todd<br>
+                    Girl's Generation<br>
+                    Yel<br>
+                    BigBang<br>
+                    December Avenue<br>
+                    Parokya Ni Edgar<br>
+                    Eminem<br>
+                    Kendrick Lamar<br>
+                    The Killers<br>
+                    Linkin Park<br>
+                    <strong>+Many more</strong>
+                </p>
+                <h3>Yes bro i listen to everything</h3>
+            </div>
+
+            <div id="tabs-3">
+                <div class="section-header">
+                    <h2>MY FAVORITE SONGS OF ALL TIME!!!</h2>
+                    <h4>IN NO PARTICULAR ORDER</h4>
                     <h3>(Trust me bro, I Know Ball)</h3>
-                </center>
+                </div>
                 <ul>
                     <li>Parokya Ni Edgar - Your Song</li>
                     <li>The Killers - Mr. Brightside</li>
-                    <li>LIt - My Own Worst Enemy</li>
+                    <li>Lit - My Own Worst Enemy</li>
                     <li>The Goo Goo Dolls - Iris (this reminds me of someone)</li>
                     <li>All of TWICE's songs (Twice is peak bro)</li>
                     <li>All of Newjeans' songs (Newjeans is peak)</li>
                     <li>Gorillaz - On Melancholy Hill</li>
                     <li>Green Day - Boulevard of Broken Dreams</li>
-                    <li>BigBang - A Fool Of Tears, Haru Haru, Bad boy, Lies, IF YOU, LET'S NOT FALL IN LOVE, SOBER, & (All of the songs in MADE album)</li>
+                    <li>BigBang - A Fool Of Tears, Haru Haru, Bad boy, Lies, IF YOU, LET'S NOT FALL IN LOVE, SOBER,
+                        & (All of the songs in MADE album)</li>
                     <li>2NE1 - Comeback Home</li>
                     <li>Bad Meets Evil, Bruno Mars - Lighters</li>
                     <li>Bruno Mars - Somewhere in Brooklyn</li>
                     <li>Leessang, Jung In - Can't Breakup Girl, Can't BreakAway Boy</li>
                     <li>Leessang - Ballerino</li>
                     <li>Leessang - remembrance</li>
-                    <strong>im too lazy to type the rest</strong>
                 </ul>
-            </p>
-        </div>
-        <div id="tabs-4">
-            <p>
-                <center><h2>MOVIES</h2></center>
+                <p><strong>im too lazy to type the rest</strong></p>
+            </div>
+
+            <div id="tabs-4">
+                <div class="section-header">
+                    <h2>MOVIES</h2>
+                </div>
                 <ul>
                     <li>Transformer Bayverse</li>
                     <li>How to Train Your Dragon Trilogy</li>
@@ -91,29 +126,42 @@
                     <li>Spider-Man: Homecoming to Brand New Brand (random day in july)</li>
                     <li>The Book of Life</li>
                 </ul>
-                <center>
+
+                <div class="section-header">
                     <h2>KDRAMAS</h2>
                     <h3>(the best kdramas as of 2026 based on my opinion)</h3>
-                    <h4>I'll include my realization for each film so you'll understand why is it the best</h4>
-                </center>
+                    <h4>I'll include my realization for each drama so you'll understand why you must watch it</h4>
+                </div>
                 <ul>
-                    <li><strong>"We are all Trying Here"</strong> - One thing that really stands out in this drama is how it reminds us that everyone is fighting their own battles quietly. The story doesn't romanticize life, it shows how messy, unfair, and exhausting adulthood can be, but it also proves that people keep moving forward anyway.</li>
-
-                    <li><strong>Can This Love Be Translated?</strong> - It's about being understood and choosing to understand someone else. The line about there being over 7,100 languages on earth hits hard, because its not really about spoken language. It's about how each of us expresses ourselves differently. Through actions, silence, humor, distance, and fear. We all have our own way of communicating, and that's what makes us unique.</li>
-
-                    <li><strong>A Love Other than Yours</strong> - A 10-year relationship isn't a lifetime obligation, especially when staying becomes draining and painful. As illustrated by Namgung's journey, letting go allows for self-discovery, emotional healing, and the establishment of healthy boundaries after closing a long chapter with Mido. Cherishing past memories without remaining trapped by them creates the personal growth necessary to choose oneself and ultimately make room to fully embrace a healthier love with Sua.</li>
-
-                    <li><strong>Once We Were Us</strong>(even though this film is in 2025 i'll still include it because it releases in dec 31, 2025 and its also peak) - Sometimes, letting go is the only way for us to grow. Letting go doesn't mean completely regretting and forgetting a person. Those what if's that we hold on too tight might be more painful than asking what went wrong. Closures don't always have to be bitter, they can be reflective and allow for acceptance to fully move one from that season.</li>
+                    <li><strong>"We are all Trying Here"</strong> - One thing that really stands out in this drama is
+                        how it reminds us that everyone is fighting their own battles quietly. The story doesn't
+                        romanticize life, it shows how messy, unfair, and exhausting adulthood can be, but it also
+                        proves that people keep moving forward anyway.</li>
+                    <li><strong>Can This Love Be Translated?</strong> - It's about being understood and choosing to
+                        understand someone else. The line about there being over 7,100 languages on earth hits hard,
+                        because its not really about spoken language. It's about how each of us expresses ourselves
+                        differently. Through actions, silence, humor, distance, and fear. We all have our own way of
+                        communicating, and that's what makes us unique.</li>
+                    <li><strong>A Love Other than Yours</strong> - A 10-year relationship isn't a lifetime obligation,
+                        especially when staying becomes draining and painful. As illustrated by Namgung's journey,
+                        letting go allows for self-discovery, emotional healing, and the establishment of healthy
+                        boundaries after closing a long chapter with Mido. Cherishing past memories without remaining
+                        trapped by them creates the personal growth necessary to choose oneself and ultimately make room
+                        to fully embrace a healthier love with Sua.</li>
+                    <li><strong>Once We Were Us</strong> (even though this film is in 2025 i'll still include it because
+                        it releases in dec 31, 2025 and its also peak) - Sometimes, letting go is the only way for us to
+                        grow. Letting go doesn't mean completely regretting and forgetting a person. Those what if's
+                        that we hold on too tight might be more painful than asking what went wrong. Closures don't
+                        always have to be bitter, they can be reflective and allow for acceptance to fully move on from
+                        that season.</li>
                 </ul>
-            </p>
-            
-        </div>
-    </div>
+            </div>
+        </section>
+    </main>
 
-    <footer>
-        <center>
-            <p>&copy; Hiro Corp. | Facebook: Nyt Zefhiro C. Concepcion</p>
-        </center>
+    <footer class="about-footer">
+        <p>&copy; Hiro Corp. | Facebook: Nyt Zefhiro C. Concepcion</p>
     </footer>
 </body>
+
 </html>
