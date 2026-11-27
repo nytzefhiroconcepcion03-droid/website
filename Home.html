@@ -6,9 +6,13 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-color: #EAF7EE;
+            background-color: #e8e8e8;
+            background-image: url("home.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             font-family: 'Times New Roman', Times, serif;
-            min-height: 50px;
+            min-height: 100vh;
             margin: 0;
             padding: 0;
         }
@@ -23,15 +27,15 @@
 
         .box-item {
             flex: 1 1 320px;
-            background-color: #EAF7EE;
-            border: 2px solid #2E7D32;
+            background-color: #000000;
+            border: 2px solid #b7b7b7;
             border-radius: 10px;
             padding: 20px 30px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .box-item h3, .long-box h3 {
-            color: #2E7D32;
+            color: #525252;
             font-size: 24px;
             margin-top: 0;
         }
@@ -43,8 +47,8 @@
         }
 
         .long-box {
-            background-color: #EAF7EE;
-            border: 2px solid #2E7D32;
+            background-color: #8c8c8c;
+            border: 2px solid #b7b7b7;
             border-radius: 10px;
             padding: 20px 30px;
             margin: 20px auto;
@@ -59,6 +63,10 @@
             margin-top: 0;
 
         }
+
+        .box-item, .long-box {
+            background-color: rgba(232,232,232);
+        }
     </style>
 </head>
 
@@ -72,7 +80,9 @@
             <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
         </ul>
     </nav>
-    
+
+
+
     <div class="content-box">
         <div class="box-item">
             <h3>Welcome to My Website!</h3>
@@ -84,7 +94,7 @@
         <div class="box-item">
             <h3>About this Website</h3>
             <p>
-                This website serve as my documentary hub to show my projects, drills and interest not only in
+                This website website serve as my documentary hub to show my projects, drills and interest not only in
                 coding but in other things also.
             </p>
         </div>
@@ -105,4 +115,3 @@
 </body>
 
 </html>
-
