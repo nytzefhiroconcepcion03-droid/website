@@ -1,9 +1,9 @@
 /*eto ang nag lalagay ng kulay sa buong navigation bar*/
 .navbar { 
-    background-color: #2e6c42; /* Primary Navy */ 
+    background-color: #747474; /* Primary Navy */ 
     width: 100%; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-	justify-content: center;
+    justify-content: center;
     padding: 10px;
 } 
 
@@ -16,6 +16,7 @@
     list-style-type: none;        /* Removes default list bullet points */ 
     margin: 0;                    /* Clears browser default margins */ 
     padding: 0;                   /* Clears browser default padding */ 
+
 }
 
 /*eto ang nag aayos ng style ng mga link*/
@@ -32,7 +33,7 @@
 
 /*eto ang default o normal na itsura ng link*/
 .nav-link:link { 
-    color: #FFFFFF; 
+    color: #000000; 
 } 
 
 /*eto ang itsura ng ink pag nabuksan na */ 
@@ -42,7 +43,7 @@
 
 /*binabago neto ang kulay pag tinapat ang mouse sa link */ 
 .nav-link:hover { 
-    background-color: #005A9C; 
+    background-color: #b7b7b7; 
     color: #FFFFFF; 
 } 
 
@@ -50,7 +51,7 @@
 .nav-link:focus { 
     outline: 3px solid #FFFFFF; 
     outline-offset: -3px; 
-    background-color: #004080; 
+    background-color: #b7b7b7; 
 } 
 
 /*eto ang nag lalagay ng pag pindot na effect pag pinindot ang link */ 
@@ -61,8 +62,8 @@
 
 /*eto ang ang lalagay ng highlight sa menu pag nasa mismong page */ 
 .nav-link.active { 
-    background-color: #2E6C42; 
-    border-bottom: 4px solid #183B24; 
+    background-color: #747474; 
+    border-bottom: 4px solid #4b4b4b; 
 }
 
 footer {
@@ -70,6 +71,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-	background-color: #2e6c42;
-	color: white;
+	background-color: #8c8c8c;
+	color: black;
+    
 }
