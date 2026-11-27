@@ -1,51 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gallery</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
+            background-image: url("gallery.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-color: #e8e8e8;
             font-family: Arial, sans-serif;
-            background: #EAF7EE;
             margin: 0;
             padding: 0;
         }
-        h1 { text-align: center; color: #1F3864; }
-            .carousel {
-            max-width: 800px;
-            margin: 0 auto;
+
+        h1 {
+            text-align: center;
+            color: #3e3e3e;
         }
+
+        /* Flexbox container holding Left Box, Carousel, and Right Box */
+        .gallery-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            max-width: 1350px;
+            margin: 150px auto 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Styling for both side boxes */
+        .side-box {
+            flex: 1;
+            max-width: 260px;
+            min-height: 220px;
+            background: rgba(0, 0, 0, 0.65);
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            /* Slight offset upward so it aligns with the image box rather than the dots */
+            margin-bottom: 36px; 
+        }
+
+        .side-box h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            padding-bottom: 8px;
+        }
+
+        .side-box p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #e0e0e0;
+        }
+
+        /* Carousel takes the center space */
+        .carousel {
+            flex: 2;
+            max-width: 750px;
+            width: 100%;
+            margin: 0;
+        }
+
         .slides {
             position: relative;
-            aspect-ratio: 16 / 9; /* keeps the shape on any screen width */
+            aspect-ratio: 16 / 9;
             overflow: hidden;
             background: #000;
             border-radius: 8px;
         }
-            slide {
-            position: absolute; /* stack all slides in the same spot */
+
+        .slide {
+            position: absolute;
             inset: 0;
             margin: 0;
         }
+
         .slide img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* fill the box without stretching */
+            object-fit: cover;
             display: block;
         }
 
-
-
-            .slide figcaption {
+        .slide figcaption {
             position: absolute;
-            left: 0; right: 0; bottom: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             padding: 12px 16px;
             background: rgba(0, 0, 0, 0.55);
             color: #fff;
-            }
-            .nav {
+        }
+
+        .nav {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -56,12 +114,26 @@
             font-size: 24px;
             padding: 10px 14px;
             cursor: pointer;
-            }
-            .nav:hover { background: rgba(0, 0, 0, 0.8); }
-            .prev { left: 8px; }
-            .next { right: 8px; }
-            .dots { text-align: center; padding: 12px 0; }
-            .dot {
+        }
+
+        .nav:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 8px;
+        }
+
+        .next {
+            right: 8px;
+        }
+
+        .dots {
+            text-align: center;
+            padding: 12px 0;
+        }
+
+        .dot {
             width: 12px;
             height: 12px;
             margin: 0 5px;
@@ -70,169 +142,230 @@
             border-radius: 50%;
             background: #b8b8b8;
             cursor: pointer;
+        }
+
+        .dot.active {
+            background: #1F3864;
+        }
+
+        /* Responsive stacking for smaller screens */
+        @media (max-width: 900px) {
+            .gallery-wrapper {
+                flex-direction: column;
+                margin-top: 100px;
             }
-            .dot.active { background: #1F3864; }
+
+            .side-box {
+                max-width: 750px;
+                width: 100%;
+                min-height: auto;
+                margin-bottom: 0;
+            }
+        }
     </style>
 </head>
+
 <body>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
-            <ul class="nav-list"> 
-            <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li> 
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> 
-            <li class="nav-item"><a class="nav-link active" href="Gallery.html">Gallery</a></li> 
-            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li> 
-            <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li> 
-            </ul> 
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="Gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
     </nav>
 
-    
-    <div class="carousel" id="carousel">
-    <div class="slides">
-    <figure class="slide">
-    <img src="img/militech.jpg" alt="Describe image 1">
-    <figcaption>future me</figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/School.jpg" alt="Describe image 2">
-    <figcaption>school picture</figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/momside.jpg" alt="Describe image 3">
-    <figcaption>Family Mother Side</figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/dadside.jpg" alt="Describe image 4">
-    <figcaption>Family Father Side</figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/hobby1.png" alt="Describe image 5">
-    <figcaption>Hobby</figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/hobby2.png" alt="Describe image 6">
-    <figcaption>Hobby</figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/hobby3.png" alt="Describe image 7">
-    <figcaption>Hobby</figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/hobby4.png" alt="Describe image 8">
-    <figcaption>Hobby</figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/fr13.jpg" alt="Describe image 9">
-    <figcaption>Friends</figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/fr5.jpg" alt="Describe image 10">
-    <figcaption></figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/fr9.jpg" alt="Describe image 11">
-    <figcaption></figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/fr1.jpg" alt="Describe image 12">
-    <figcaption></figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/fr2.jpg" alt="Describe image 13">
-    <figcaption></figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/fr6.jpg" alt="Describe image 14">
-    <figcaption></figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/fr4.jpg" alt="Describe image 15">
-    <figcaption></figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/fr10.jpg" alt="Describe image 16">
-    <figcaption></figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/fr7.jpg" alt="Describe image 17">
-    <figcaption></figcaption>
-    </figure>
-    <figure class="slide">
-    <img src="img/fr19.jpg" alt="Describe image 18">
-    <figcaption></figcaption>
-    </figure>
-    <button class="nav prev" type="button" aria-label="Previous
-    slide">&#10094;</button>
+    <div class="gallery-wrapper">
+        
+        <aside class="side-box left-box">
+            <h3>My Gallery</h3>
+            <p>Welcome to my personal gallery. Use the arrows, dots, or keyboard arrow keys to browse through my goals, school memories, family, hobbies, and friends.</p>
+        </aside>
 
+        <div class="carousel" id="carousel">
+            <div class="slides">
+                <figure class="slide" data-title="Future Me" data-desc="This my vision in the future which is i'll be working in a large corporation with a high position.">
+                    <img src="img/militech.jpg" alt="Describe image 1">
+                    <figcaption>future me</figcaption>
+                </figure>
+                <figure class="slide" data-title="School Picture" data-desc="Current me and will be graduating in senior high.">
+                    <img src="img/School.jpg" alt="Describe image 2">
+                    <figcaption>school picture</figcaption>
+                </figure>
+                <figure class="slide" data-title="Family (Mother Side)" data-desc="Our Complete Family picture during my grandfather's 75th Birthday.">
+                    <img src="img/momside.jpg" alt="Describe image 3">
+                    <figcaption>Family Mother Side</figcaption>
+                </figure>
+                <figure class="slide" data-title="Family (Father Side)" data-desc="Our familiy photo during one of our family dinner.">
+                    <img src="img/dadside.jpg" alt="Describe image 4">
+                    <figcaption>Family Father Side</figcaption>
+                </figure>
+                <figure class="slide" data-title="Hobby 1" data-desc="One of the games i play to cure my boredom.">
+                    <img src="img/hobby1.png" alt="Describe image 5">
+                    <figcaption>Hobby</figcaption>
+                </figure>
+                <figure class="slide" data-title="Hobby 2" data-desc="One of my favorite things to do watching anime.">
+                    <img src="img/hobby2.png" alt="Describe image 6">
+                    <figcaption>Hobby</figcaption>
+                </figure>
+                <figure class="slide" data-title="Hobby 3" data-desc="This also one of my favorite thing to do to pass time.">
+                    <img src="img/hobby3.png" alt="Describe image 7">
+                    <figcaption>Hobby</figcaption>
+                </figure>
+                <figure class="slide" data-title="Hobby 4" data-desc="I also like to listen to music.">
+                    <img src="img/hobby4.png" alt="Describe image 8">
+                    <figcaption>Hobby</figcaption>
+                </figure>
+                <figure class="slide" data-title="Friends" data-desc="Me and some of my friends after our moving up ceremony in grade 10.">
+                    <img src="img/fr13.jpg" alt="Describe image 9">
+                    <figcaption>Friends</figcaption>
+                </figure>
+                <figure class="slide" data-title="Friends" data-desc="This is our group picture during g11 recogniton with our adviser sir pau (goated teacher btw) because we received a honors award.">
+                    <img src="img/fr5.jpg" alt="Describe image 10">
+                    <figcaption></figcaption>
+                </figure>
+                <figure class="slide" data-title="Friends" data-desc="Photo taken during King Vaughn's birthday celebration.">
+                    <img src="img/fr9.jpg" alt="Describe image 11">
+                    <figcaption></figcaption>
+                </figure>
+                <figure class="slide" data-title="Friends" data-desc="My two gbf in bacoor.">
+                    <img src="img/fr1.jpg" alt="Describe image 12">
+                    <figcaption></figcaption>
+                </figure>
+                <figure class="slide" data-title="Friends" data-desc="My three gbf in bacoor.">
+                    <img src="img/fr2.jpg" alt="Describe image 13">
+                    <figcaption></figcaption>
+                </figure>
+                <figure class="slide" data-title="Friends" data-desc="Three random dudes taking pictures on the bus.">
+                    <img src="img/fr6.jpg" alt="Describe image 14">
+                    <figcaption></figcaption>
+                </figure>
+                <figure class="slide" data-title="Friends" data-desc="The last photo with our friend before he migrate in the US (miss you bro).">
+                    <img src="img/fr4.jpg" alt="Describe image 15">
+                    <figcaption></figcaption>
+                </figure>
+                <figure class="slide" data-title="Friends" data-desc="Us 4 hanging out before 2026. ">
+                    <img src="img/fr10.jpg" alt="Describe image 16">
+                    <figcaption></figcaption>
+                </figure>
+                <figure class="slide" data-title="Friends" data-desc="One of my bestfriend that im always with during my junior high school days (he's a good cook, hes our own ninong ry.)">
+                    <img src="img/fr7.jpg" alt="Describe image 17">
+                    <figcaption></figcaption>
+                </figure>
+                <figure class="slide" data-title="Friends" data-desc="Us 4 hanging out before 2026 (part 2).">
+                    <img src="img/fr19.jpg" alt="Describe image 18">
+                    <figcaption></figcaption>
+                </figure>
 
-    <button class="nav next" type="button" aria-label="Next slide">&#10095;</button>
+                <button class="nav prev" type="button" aria-label="Previous slide">&#10094;</button>
+                <button class="nav next" type="button" aria-label="Next slide">&#10095;</button>
+            </div>
+            <div class="dots"></div>
+        </div>
+
+        <!-- RIGHT BOX (Dynamic Description) -->
+        <aside class="side-box right-box">
+            <h3 id="desc-title">Future Me</h3>
+            <p id="desc-text">Aspiring for a career in military aviation and technology.</p>
+        </aside>
+
     </div>
-    <div class="dots"></div>
-    </div>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
-    $(document).ready(function () {
-    // 1. Cache elements and settings
-    const $carousel = $("#carousel");
-    const $slides = $carousel.find(".slide");
-    const $dotsBox = $carousel.find(".dots");
-    const total = $slides.length;
-    const FADE_TIME = 500; // milliseconds
-    const DELAY = 4000; // time between automatic slides
-    let current = 0; // index of the visible slide
-    let timer = null; // holds the autoplay timer
-    // 2. Initial state: show only the first slide
-    $slides.hide().eq(0).show();
-    // 3. Create one dot per slide
-    $slides.each(function (i) {
-    $("<button>")
-    .attr({ type: "button", "aria-label": "Go to slide " + (i + 1) })
-    .addClass("dot" + (i === 0 ? " active" : ""))
-    .data("index", i)
-    .appendTo($dotsBox);
-    });
-    const $dots = $dotsBox.find(".dot");
-    // 4. Show a specific slide
-    function showSlide(index) {
-    if (index === current) return; // nothing to do
-    $slides.eq(current).stop(true, true).fadeOut(FADE_TIME);
-    $slides.eq(index).stop(true, true).fadeIn(FADE_TIME);
-    $dots.removeClass("active").eq(index).addClass("active");
-    current = index;
-    }
-    function nextSlide() { showSlide((current + 1) % total); }
-    function prevSlide() { showSlide((current - 1 + total) % total); }
-    // 5. Controls
-    $carousel.on("click", ".next", nextSlide);
-    $carousel.on("click", ".prev", prevSlide);
-    $dotsBox.on("click", ".dot", function () {
-    showSlide($(this).data("index"));
-    });
-    // 6. Autoplay (pauses on hover)
-    function startAutoplay() {
-    stopAutoplay(); // avoid duplicate timers
-    timer = setInterval(nextSlide, DELAY);
-    }
-    function stopAutoplay() {
-    clearInterval(timer);
-    }
-    $carousel.on("mouseenter", stopAutoplay)
+        $(document).ready(function () {
+            // 1. Cache elements and settings
+            const $carousel = $("#carousel");
+            const $slides = $carousel.find(".slide");
+            const $dotsBox = $carousel.find(".dots");
+            const $descTitle = $("#desc-title");
+            const $descText = $("#desc-text");
+            const total = $slides.length;
+            const FADE_TIME = 500; // milliseconds
+            const DELAY = 4000; // time between automatic slides
+            let current = 0; // index of the visible slide
+            let timer = null; // holds the autoplay timer
 
-    .on("mouseleave", startAutoplay);
-    startAutoplay();
-    // 7. Keyboard control
-    $(document).on("keydown", function (event) {
-    if (event.key === "ArrowRight") {
-    nextSlide();
-    } else if (event.key === "ArrowLeft") {
-    prevSlide();
-    }
-    });
-    });
+            // Helper function to update the right description box
+            function updateDescription(index) {
+                const $targetSlide = $slides.eq(index);
+                const title = $targetSlide.data("title") || "Description";
+                const desc = $targetSlide.data("desc") || "";
+
+                $descTitle.fadeOut(FADE_TIME / 2, function () {
+                    $(this).text(title).fadeIn(FADE_TIME / 2);
+                });
+                $descText.fadeOut(FADE_TIME / 2, function () {
+                    $(this).text(desc).fadeIn(FADE_TIME / 2);
+                });
+            }
+
+            // 2. Initial state: show only the first slide and set initial description
+            $slides.hide().eq(0).show();
+            $descTitle.text($slides.eq(0).data("title"));
+            $descText.text($slides.eq(0).data("desc"));
+
+            // 3. Create one dot per slide
+            $slides.each(function (i) {
+                $("<button>")
+                    .attr({ type: "button", "aria-label": "Go to slide " + (i + 1) })
+                    .addClass("dot" + (i === 0 ? " active" : ""))
+                    .data("index", i)
+                    .appendTo($dotsBox);
+            });
+            const $dots = $dotsBox.find(".dot");
+
+            // 4. Show a specific slide
+            function showSlide(index) {
+                if (index === current) return; // nothing to do
+                $slides.eq(current).stop(true, true).fadeOut(FADE_TIME);
+                $slides.eq(index).stop(true, true).fadeIn(FADE_TIME);
+                $dots.removeClass("active").eq(index).addClass("active");
+                
+                // Update the right box description
+                updateDescription(index);
+                
+                current = index;
+            }
+
+            function nextSlide() { showSlide((current + 1) % total); }
+            function prevSlide() { showSlide((current - 1 + total) % total); }
+
+            // 5. Controls
+            $carousel.on("click", ".next", nextSlide);
+            $carousel.on("click", ".prev", prevSlide);
+            $dotsBox.on("click", ".dot", function () {
+                showSlide($(this).data("index"));
+            });
+
+            // 6. Autoplay (pauses on hover)
+            function startAutoplay() {
+                stopAutoplay(); // avoid duplicate timers
+                timer = setInterval(nextSlide, DELAY);
+            }
+            function stopAutoplay() {
+                clearInterval(timer);
+            }
+            $carousel.on("mouseenter", stopAutoplay)
+                .on("mouseleave", startAutoplay);
+            startAutoplay();
+
+            // 7. Keyboard control
+            $(document).on("keydown", function (event) {
+                if (event.key === "ArrowRight") {
+                    nextSlide();
+                } else if (event.key === "ArrowLeft") {
+                    prevSlide();
+                }
+            });
+        });
     </script>
     <footer>
         <center>
-            <p>&copy; Hiro Corp. | Nyt's personal website</p>
+            <p>&copy; Hiro Corp. | Facebook: Nyt Zefhiro C. Concepcion</p>
         </center>
     </footer>
 </body>
+
 </html>
